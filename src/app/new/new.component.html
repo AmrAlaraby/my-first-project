@@ -1,0 +1,50 @@
+<!-- <p *ngIf="isIf ;else not">new works!</p>
+
+<ng-template #not>
+   <p> nooo</p>
+</ng-template>
+
+<div [ngSwitch]="name">
+    <h1 *ngSwitchCase="'ali'">hi</h1>
+    <h1 *ngSwitchCase="'amr'">hello</h1>
+</div> -->
+<div class="mx-5 w-50">
+
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Row</label>
+    <input [(ngModel)]='row' type="number" min="1" max="3" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+</div>
+<div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input [(ngModel)]='name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+
+
+</div>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let item of data;let i = index'>
+            <th scope="row">{{i+1}}</th>
+            <td *ngIf="row==i+1 ; else not">{{name}}</td>
+            <td>{{item.last}}</td>
+            <td>{{item.handle}}</td>
+            <ng-template #not>
+                <p>{{item.first}}</p>
+            </ng-template>
+        </tr>
+
+    </tbody>
+
+</table>

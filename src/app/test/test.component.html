@@ -1,0 +1,18 @@
+<!-- <div class="mx-5"><p >test works! {{test}} </p>
+<button type="button" [disabled]="isDisabled" class="btn btn-primary"[class.red-colour]="isRed">Primary</button>
+<h1 class="w-50 mx-auto" [ngClass]="{'red-colour':isRed , 'black-bg':isBlackBg}">hiiiiiiiiiiiiii</h1>
+<h1 class="w-50 mx-auto" [ngClass]="  isBlackBg ? 'black-bg' : 'green-bg' ">hiiiiiiiiiiiiii </h1>
+<h1 [style.color]="isRed ? 'red'  : 'green'">heheheheheheheh</h1>
+<h1 [ngStyle]="{'color':isRed ? 'red'  : 'green','backgroundColor' :isBlackBg ? 'black' : 'blue' }">asdfg</h1>
+<button type="button" class="btn btn-primary"[class.red-colour]="isRed" (click)="changeCol()">Change Color</button>
+<button type="button" class="btn btn-primary"[class.red-colour]="isRed" (click)="changeRed(true)">red</button>
+<button type="button" class="btn btn-primary"[class.red-colour]="isRed" (click)="changeRed(false)">green Color</button>
+</div> -->
+
+<div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input [(ngModel)]='email' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
+    <p>{{email}}</p>
+  </div>
